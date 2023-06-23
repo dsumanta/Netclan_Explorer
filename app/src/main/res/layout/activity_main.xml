@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F0F3A">
+
+        <Button
+            android:id="@+id/dropdown_menu"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:tint="@android:color/white"
+            android:background="@drawable/baseline_menu_24" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:text="John Doe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:drawableLeft="@drawable/baseline_location_on_24"
+                android:drawablePadding="8dp"
+                android:text="San Francisco" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/refine_Screen"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:tint="@android:color/white"
+                android:padding="0dp"
+                android:drawableTop="@drawable/baseline_menu_open_24"
+                android:drawablePadding="0dp"
+                android:textColor="#F1EAEA"
+                android:background="@android:color/transparent"
+                android:text="Refine" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#240A51"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Personal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:text="Personal" />
+
+        <Button
+            android:id="@+id/Business"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:text="Business" />
+
+        <Button
+            android:id="@+id/Merchant"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:text="Merchant" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Search"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_margin="25dp"
+            android:drawableLeft="@drawable/baseline_search_24"
+            android:drawablePadding="15dp"
+            android:text="Search"
+            android:textSize="15sp"
+            android:textColor="#F80FE8CD"
+            android:textStyle="bold"
+            android:paddingLeft="25dp"
+            android:background="@drawable/circular_background" />
+
+        <Button
+            android:id="@+id/filter"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/baseline_filter_alt_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:orientation="vertical">
+
+        <!-- Add your content here -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_bar">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/baseline_remove_red_eye_24"
+            android:text="Explore"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:textColor="#AE9C9C"
+            android:background="@android:color/transparent"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/baseline_recycling_24"
+            android:text="Network"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:textColor="#AE9C9C"
+            android:background="@android:color/transparent"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/round_chat_24"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="chat"
+            android:textColor="#AE9C9C"
+            android:background="@android:color/transparent"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="Contacts"
+            android:textColor="#AE9C9C"
+            android:drawableTop="@drawable/round_perm_contact_calendar_24"
+            android:background="@android:color/transparent"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/group_grid_3x3_24"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="Group"
+            android:textColor="#AE9C9C"
+            android:background="@android:color/transparent"
+
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
